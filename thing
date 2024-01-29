@@ -1,10 +1,24 @@
+--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+--The following section was auto-generated because this script isn't verified. If you have full trust in this script, you may pay no attention to it and remove it. Otherwise, it's best to to keep it in for additional protection
+if not game:IsLoaded() then game.Loaded:Wait() end
+if identifyexecutor()~="Codex" then
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/GalacticHypernova/Guardian/main/MainProd"))()
+else
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/GalacticHypernova/Guardian/main/CodexTest"))()
+end
+-- END OF AUTO-GENERATED CONTENTS. THE SCRIPT BEGINS HERE:
+-- END OF AUTO-GENERATED CONTENTS. THE SCRIPT BEGINS HERE:
+-- END OF AUTO-GENERATED CONTENTS. THE SCRIPT BEGINS HERE:
+-- END OF AUTO-GENERATED CONTENTS. THE SCRIPT BEGINS HERE:
 local showText = true -- Change to false if you don't want to see the esp ore text
 
 if game.PlaceId ==8549934015 then -- Normal World, remove or add to the excludedOres as needed
 excludedOres = {"Magma", "Stone", "Copper", "Basalt", "Amber", "Diorite", "Coal", "Crystallized Stone", "Nickel", "Bedrock", "Gold", "Granite", "Iron", "Marble", "Etherstone", "Prismatistone","Silver","Obsidian","Ice","Voidstone","Ruby","Celestone","Mantle","Goldstone","Barrier","Quartz","Reflectistone","Emerald","Bismuth"}
 else
     if game.PlaceId ==10129505074 then -- Moon World, remove or add to the excludedOres as needed
-excludedOres = {"Moon Stone", "Tin", "Moon Mantle", "Jasper", "Aluminum", "Moon Core", "Zinc", "Coal", "Magma", "Titanium", "Legacy Uranium", "Lithium", "Nickel", "Quartz", "Gold", "Tourmaline","Jade","Silver","Lapis Lazuli","Bismuth","Nebula","Strontium","Scandium","Platinum","Amethyst","Barrier","Garnet","Cobalt","Emerald","Heliodor","Aquamarine","Topaz","Diamond","Beryllium","Morganite","Ruby","Rocc","Moonrock","nil"}
+excludedOres = {"Moon Stone", "Tin", "Moon Mantle", "Jasper", "Aluminum", "Moon Core", "Zinc", "Coal", "Magma", "Copper", "Titanium", "Legacy Uranium", "Lithium", "Nickel", "Quartz", "Gold", "Tourmaline","Jade","Silver","Lapis Lazuli","Bismuth","Nebula","Strontium","Scandium","Platinum","Amethyst","Barrier","Garnet","Cobalt","Emerald","Heliodor","Aquamarine","Topaz","Diamond","Beryllium","Morganite","Ruby","Rocc","Moonrock","nil"}
 end
 end
 
@@ -84,6 +98,8 @@ function isOreExcluded(block)
     if block:IsA("BasePart") and isValidName(block.Name) then
         local distance = (game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position - block.Position).magnitude
         createESP(block, distance)
+        else
+        block.Transparency = 0.35
     end
 end
 
