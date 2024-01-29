@@ -11,7 +11,7 @@
 local showText = true -- Change to false if you don't want to see the esp ore text
 
 if game.PlaceId ==14550379109 then -- Normal World, remove or add to the excludedOres as needed
-excludedOres = {"Magma", "Stone", "Copper", "Basalt", "Amber", "Diorite", "Coal", "Crystallized Stone", "Nickel", "Bedrock", "Gold", "Granite", "Iron", "Marble", "Etherstone", "Prismatistone","Silver","Obsidian","Ice","Voidstone","Ruby","Celestone","Mantle","Goldstone","Barrier","Quartz","Reflectistone","Emerald"}
+excludedOres = {"Magma", "Chroma Contaris", "Obsidian Glass", "Cobalt", "Stone", "Copper", "Basalt", "Amber", "Diorite", "Coal", "Crystallized Stone", "Nickel", "Bedrock", "Gold", "Granite", "Iron", "Marble", "Etherstone", "Prismatistone","Silver","Obsidian","Ice","Voidstone","Ruby","Celestone","Mantle","Goldstone","Barrier","Quartz","Reflectistone","Emerald"}
 else
     if game.PlaceId ==10129505074 then -- Moon World, remove or add to the excludedOres as needed
 excludedOres = {"Moon Stone", "Tin", "Moon Mantle", "Jasper", "Aluminum", "Moon Core", "Zinc", "Coal", "Magma", "Copper", "Titanium", "Legacy Uranium", "Lithium", "Nickel", "Quartz", "Gold", "Tourmaline","Jade","Silver","Lapis Lazuli","Bismuth","Nebula","Strontium","Scandium","Platinum","Amethyst","Barrier","Garnet","Cobalt","Emerald","Heliodor","Aquamarine","Topaz","Diamond","Beryllium","Morganite","Ruby","Rocc","Moonrock","nil"}
@@ -94,8 +94,6 @@ function isOreExcluded(block)
     if block:IsA("BasePart") and isValidName(block.Name) then
         local distance = (game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position - block.Position).magnitude
         createESP(block, distance)
-        else
-        block.Transparency = 0.35
     end
 end
 
