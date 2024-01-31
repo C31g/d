@@ -11,7 +11,7 @@
 local showText = true -- Change to false if you don't want to see the esp ore text
 
 if game.PlaceId ==14550379109 then -- Normal World, remove or add to the excludedOres as needed
-excludedOres = {"Magma", "Olivine", "Palladium", "Chroma Contaris", "Obsidian Glass", "Cobalt", "Stone", "Copper", "Basalt", "Amber", "Diorite", "Coal", "Crystallized Stone", "Nickel", "Bedrock", "Gold", "Granite", "Iron", "Marble", "Etherstone", "Prismatistone","Silver","Obsidian","Ice","Voidstone","Ruby","Celestone","Mantle","Goldstone","Barrier","Quartz","Reflectistone","Emerald"}
+excludedOres = {"Magma", "Olivine", "Palladium", "Chroma Contaris", "Core Fragment", "Obsidian Glass", "Cobalt", "Stone", "Copper", "Basalt", "Amber", "Diorite", "Coal", "Crystallized Stone", "Nickel", "Bedrock", "Gold", "Granite", "Iron", "Marble", "Etherstone", "Prismatistone","Silver","Obsidian","Ice","Voidstone","Ruby","Celestone","Mantle","Goldstone","Barrier","Quartz","Reflectistone","Emerald"}
 else
     if game.PlaceId ==10129505074 then -- Moon World, remove or add to the excludedOres as needed
 excludedOres = {"Moon Stone", "Sapphire", "Chrome", "Cerrusite", "Gilded Gold", "Diamond", "Legacy Cryotic", "Lumbonium", "Sporgilian", "Legacy Zefendium", "Ocean Jasper" , "Legacy Jet", "Vegentium","Jaxite", "Tin", "Moon Mantle", "Jasper", "Aluminum", "Moon Core", "Zinc", "Coal", "Magma", "Copper", "Titanium", "Legacy Uranium", "Lithium", "Nickel", "Quartz", "Gold", "Tourmaline","Jade","Silver","Lapis Lazuli","Bismuth","Nebula","Strontium","Scandium","Platinum","Amethyst","Barrier","Garnet","Cobalt","Emerald","Heliodor","Aquamarine","Topaz","Turquoise","Beryllium","Morganite","Ruby","Rocc","Moonrock","nil"}
