@@ -17,7 +17,7 @@ else
 excludedOres = {"Moon Stone", "Sapphire", "Chrome", "Cerrusite", "Gilded Gold", "Diamond", "Legacy Cryotic", "Lumbonium", "Sporgilian", "Legacy Zefendium", "Ocean Jasper" , "Legacy Jet", "Vegentium","Jaxite", "Tin", "Moon Mantle", "Jasper", "Aluminum", "Moon Core", "Zinc", "Coal", "Magma", "Copper", "Titanium", "Legacy Uranium", "Lithium", "Nickel", "Quartz", "Gold", "Tourmaline","Jade","Silver","Lapis Lazuli","Bismuth","Nebula","Strontium","Scandium","Platinum","Amethyst","Barrier","Garnet","Cobalt","Emerald","Heliodor","Aquamarine","Topaz","Turquoise","Beryllium","Morganite","Ruby","Rocc","Moonrock","nil"}
 else
    if game.PlaceId ==14550379349 then
-excludedOres = {"Slate", "Charcoal", "Clay", "Maricite", "Lepidustone", "Hazenite","Gratonite","Andesine","Sodium","Xenotime","Amazonite","Destabilite","Galaxistone","Lumilux","Lunalistone","Goldstone","M-Star Fragment","O-Star Fragment","G-Star Fragment","Eboxylite","Riftrock","Larimar","Charolite","Rhodochrosite","Diotride"}
+excludedOres = {"Sphalerite","Diopside","Oligoclase","Slate", "Charcoal", "Clay", "Maricite", "Lepidustone", "Hazenite","Gratonite","Andesine","Sodium","Xenotime","Amazonite","Destabilite","Galaxistone","Lumilux","Lunalistone","Goldstone","M-Star Fragment","O-Star Fragment","G-Star Fragment","Eboxylite","Riftrock","Larimar","Charolite","Rhodochrosite","Diotride"}
 end
 end
 end
