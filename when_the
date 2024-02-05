@@ -5,5 +5,28 @@ game:GetService("ReplicatedStorage").CurCapacity.Value >=
 while true do
 if game:GetService("ReplicatedStorage").CurCapacity.Value >= 115000 then
 if x = 0 then
+ x = 1
+ for i,v in pairs(workspace.Mine:GetChildren()) do
+ if not table.find(excludedOres,v.Name) then
+ local args = {
+    [1] = v,
+    [2] = "AbleToTriggerAbilities"
+ }
+
+ game:GetService("ReplicatedStorage").MineOre:InvokeServer(unpack(args))
+ end
+ end
+else
+local args = {
+    [1] = workspace.Mine.Diorite,
+    [2] = "AbleToTriggerAbilities"
+}
+
+game:GetService("ReplicatedStorage").MineOre:InvokeServer(unpack(args))
+end
+end
+end
+
+
 
 
