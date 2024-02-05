@@ -1,3 +1,9 @@
 115000
+local excludedOres = {"Goldstone","Pyrite","Black Diamond","Musgravite","Olivine","Osmium","Uranium","Emerald","Bismuth","Delectium","Magma", "Palladium", "Chroma Contaris", "Core Fragment", "Obsidian Glass", "Stone", "Copper", "Basalt", "Amber", "Diorite", "Coal", "Crystallized Stone", "Nickel", "Bedrock", "Gold", "Granite", "Iron", "Marble", "Etherstone", "Prismatistone","Silver","Obsidian","Ice","Voidstone","Ruby","Celestone","Mantle","Barrier","Quartz","Reflectistone"}
+local x = 0
 game:GetService("ReplicatedStorage").CurCapacity.Value >=
-wilde true do
+while true do
+if game:GetService("ReplicatedStorage").CurCapacity.Value >= 115000 then
+if x = 0 then
+
+
