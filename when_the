@@ -1,31 +1,33 @@
 local excludedOres = {"Goldstone","Pyrite","Black Diamond","Musgravite","Olivine","Osmium","Uranium","Emerald","Bismuth","Delectium","Magma", "Palladium", "Chroma Contaris", "Core Fragment", "Obsidian Glass", "Stone", "Copper", "Basalt", "Amber", "Diorite", "Coal", "Crystallized Stone", "Nickel", "Bedrock", "Gold", "Granite", "Iron", "Marble", "Etherstone", "Prismatistone","Silver","Obsidian","Ice","Voidstone","Ruby","Celestone","Mantle","Barrier","Quartz","Reflectistone"}
 local x = 0
+
 while true do
- if game:GetService("ReplicatedStorage").CurCapacity.Value >= 115000 then
- if x == 0 then
-  x = 1
-  for i,v in pairs(workspace.Mine:GetChildren()) do
-  if not table.find(excludedOres,v.Name) then
-  local args = {
-     [1] = v,
-     [2] = "AbleToTriggerAbilities"
-  }
+    local curCapacity = game:GetService("ReplicatedStorage").CurCapacity.Value
 
-  game:GetService("ReplicatedStorage").MineOre:InvokeServer(unpack(args))
-  end
- end
-else
- local args = {
-    [1] = workspace.Mine.Stone,
-    [2] = "AbleToTriggerAbilities"
- }
+    if curCapacity >= 115000 then
+        if x == 0 then
+            x = 1
+            for _, v in pairs(workspace.Mine:GetChildren()) do
+                if not table.find(excludedOres, v.Name) then
+                    local args = {
+                        [1] = v,
+                        [2] = "AbleToTriggerAbilities"
+                    }
 
- game:GetService("ReplicatedStorage").MineOre:InvokeServer(unpack(args))
- x = 0
+                    game:GetService("ReplicatedStorage").MineOre:InvokeServer(unpack(args))
+                end
+            end
+        end
+     if x == 1 and curCapacity < 115000 then
+            local args = {
+                [1] = workspace.Mine.Stone,
+                [2] = "AbleToTriggerAbilities"
+            }
+
+            game:GetService("ReplicatedStorage").MineOre:InvokeServer(unpack(args))
+            x = 0
+        end
+    end
+
+    wait(1)  -- You might want to add a wait to prevent excessive looping and performance issues
 end
-end
-end
-
-
-
-
