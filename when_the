@@ -1,1 +1,3 @@
-
+115000
+game:GetService("ReplicatedStorage").CurCapacity.Value >=
+wilde true do
