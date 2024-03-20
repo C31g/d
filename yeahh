@@ -1,0 +1,8 @@
+local args = {
+    [1] = {
+        ["command"] = "saveInventory",
+        ["saveData"] =  "[{\"quantity\":1000, \"equipped\":true, \"itemid\":21}]"
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("MainControl"):InvokeServer(unpack(args))
