@@ -1,4 +1,4 @@
-local excludedOres = {"Goldstone","Pyrite","Black Diamond","Musgravite","Olivine","Osmium","Uranium","Emerald","Bismuth","Delectium","Magma", "Palladium", "Chroma Contaris", "Core Fragment", "Obsidian Glass", "Stone", "Copper", "Basalt", "Amber", "Diorite", "Coal", "Crystallized Stone", "Nickel", "Bedrock", "Gold", "Granite", "Iron", "Marble", "Etherstone", "Prismatistone","Silver","Obsidian","Ice","Voidstone","Ruby","Celestone","Mantle","Barrier","Quartz","Reflectistone"}
+local excludedOres = {"Goldstone","Pyrite","Black Diamond","Slate","Musgravite","Olivine","Osmium","Uranium","Emerald","Bismuth","Delectium","Magma", "Palladium", "Chroma Contaris", "Core Fragment", "Obsidian Glass", "Stone", "Copper", "Basalt", "Amber", "Diorite", "Coal", "Crystallized Stone", "Nickel", "Bedrock", "Gold", "Granite", "Iron", "Marble", "Etherstone", "Prismatistone","Silver","Obsidian","Ice","Voidstone","Ruby","Celestone","Mantle","Barrier","Quartz","Reflectistone"}
 for i,v in pairs(workspace.Mine:GetChildren()) do
 if not table.find(excludedOres,v.Name) then
 local args = {
