@@ -1,0 +1,11 @@
+local excludedOres = {"Titanium","Strontium","Lithium","Vortennial","Chambersite","Chrome","Corroplat","Uldarite","Platinum","Inktite","Scandium","Hyperstone","Legacy Jet",}
+for i,v in pairs(workspace.Mine:GetChildren()) do
+if table.find(excludedOres,v.Name) then
+local args = {
+    [1] = v,
+    [2] = "AbleToTriggerAbilities"
+}
+
+game:GetService("ReplicatedStorage").MineOre:InvokeServer(unpack(args))
+end
+end
