@@ -1,4 +1,4 @@
-local excludedOres = {"Nickel","Crystallized Stone","Nocturnite"}
+local excludedOres = {"Nocturnite"}
 for i,v in pairs(workspace.Mine:GetChildren()) do
 if table.find(excludedOres,v.Name) then
 local args = {
