@@ -1,0 +1,135 @@
+print("a")
+while true do
+    wait(0.001)
+for i, v in pairs(game.Workspace:GetChildren()) do
+    if v.Name ~= "C31g" and v:IsA("Model") and v:FindFirstChild("HumanoidRootPart") then
+local args = {
+    [1] = "throwswordlong",
+    [2] = {
+        [1] = CFrame.new(v.HumanoidRootPart.Position.X,v.HumanoidRootPart.Position.Y, v.HumanoidRootPart.Position.Z) * CFrame.Angles(0.015594969503581524, 0.7671796679496765, -0.010825042612850666)
+    }
+}
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Phantom Reminder").RemoteFunction:InvokeServer(unpack(args))
+local args = {
+    [1] = "throwswordlong",
+    [2] = {
+        [1] = CFrame.new(v.HumanoidRootPart.Position.X,v.HumanoidRootPart.Position.Y, v.HumanoidRootPart.Position.Z) * CFrame.Angles(0.015594969503581524, 0.7671796679496765, -0.010825042612850666)
+    }
+}
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Phantom Reminder").RemoteFunction:InvokeServer(unpack(args))
+local args = {
+    [1] = "throwswordlong",
+    [2] = {
+        [1] = CFrame.new(v.HumanoidRootPart.Position.X,v.HumanoidRootPart.Position.Y, v.HumanoidRootPart.Position.Z) * CFrame.Angles(0.015594969503581524, 0.7671796679496765, -0.010825042612850666)
+    }
+}
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Phantom Reminder").RemoteFunction:InvokeServer(unpack(args))
+local args = {
+    [1] = "throwswordlong",
+    [2] = {
+        [1] = CFrame.new(v.HumanoidRootPart.Position.X,v.HumanoidRootPart.Position.Y, v.HumanoidRootPart.Position.Z) * CFrame.Angles(0.015594969503581524, 0.7671796679496765, -0.010825042612850666)
+    }
+}
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Phantom Reminder").RemoteFunction:InvokeServer(unpack(args))
+local args = {
+    [1] = "throwswordlong",
+    [2] = {
+        [1] = CFrame.new(v.HumanoidRootPart.Position.X,v.HumanoidRootPart.Position.Y, v.HumanoidRootPart.Position.Z) * CFrame.Angles(0.015594969503581524, 0.7671796679496765, -0.010825042612850666)
+    }
+}
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Phantom Reminder").RemoteFunction:InvokeServer(unpack(args))
+local args = {
+    [1] = "throwswordlong",
+    [2] = {
+        [1] = CFrame.new(v.HumanoidRootPart.Position.X,v.HumanoidRootPart.Position.Y, v.HumanoidRootPart.Position.Z) * CFrame.Angles(0.015594969503581524, 0.7671796679496765, -0.010825042612850666)
+    }
+}
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Phantom Reminder").RemoteFunction:InvokeServer(unpack(args))
+local args = {
+    [1] = "throwswordlong",
+    [2] = {
+        [1] = CFrame.new(v.HumanoidRootPart.Position.X,v.HumanoidRootPart.Position.Y, v.HumanoidRootPart.Position.Z) * CFrame.Angles(0.015594969503581524, 0.7671796679496765, -0.010825042612850666)
+    }
+}
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Phantom Reminder").RemoteFunction:InvokeServer(unpack(args))
+local args = {
+    [1] = "throwswordlong",
+    [2] = {
+        [1] = CFrame.new(v.HumanoidRootPart.Position.X,v.HumanoidRootPart.Position.Y, v.HumanoidRootPart.Position.Z) * CFrame.Angles(0.015594969503581524, 0.7671796679496765, -0.010825042612850666)
+    }
+}
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Phantom Reminder").RemoteFunction:InvokeServer(unpack(args))
+local args = {
+    [1] = "throwswordlong",
+    [2] = {
+        [1] = CFrame.new(v.HumanoidRootPart.Position.X,v.HumanoidRootPart.Position.Y, v.HumanoidRootPart.Position.Z) * CFrame.Angles(0.015594969503581524, 0.7671796679496765, -0.010825042612850666)
+    }
+}
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Phantom Reminder").RemoteFunction:InvokeServer(unpack(args))
+local args = {
+    [1] = "throwswordlong",
+    [2] = {
+        [1] = CFrame.new(v.HumanoidRootPart.Position.X,v.HumanoidRootPart.Position.Y, v.HumanoidRootPart.Position.Z) * CFrame.Angles(0.015594969503581524, 0.7671796679496765, -0.010825042612850666)
+    }
+}
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Phantom Reminder").RemoteFunction:InvokeServer(unpack(args))
+local args = {
+    [1] = "throwswordlong",
+    [2] = {
+        [1] = CFrame.new(v.HumanoidRootPart.Position.X,v.HumanoidRootPart.Position.Y, v.HumanoidRootPart.Position.Z) * CFrame.Angles(0.015594969503581524, 0.7671796679496765, -0.010825042612850666)
+    }
+}
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Phantom Reminder").RemoteFunction:InvokeServer(unpack(args))
+local args = {
+    [1] = "throwswordlong",
+    [2] = {
+        [1] = CFrame.new(v.HumanoidRootPart.Position.X,v.HumanoidRootPart.Position.Y, v.HumanoidRootPart.Position.Z) * CFrame.Angles(0.015594969503581524, 0.7671796679496765, -0.010825042612850666)
+    }
+}
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Phantom Reminder").RemoteFunction:InvokeServer(unpack(args))
+local args = {
+    [1] = "throwswordlong",
+    [2] = {
+        [1] = CFrame.new(v.HumanoidRootPart.Position.X,v.HumanoidRootPart.Position.Y, v.HumanoidRootPart.Position.Z) * CFrame.Angles(0.015594969503581524, 0.7671796679496765, -0.010825042612850666)
+    }
+}
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Phantom Reminder").RemoteFunction:InvokeServer(unpack(args))
+local args = {
+    [1] = "throwswordlong",
+    [2] = {
+        [1] = CFrame.new(v.HumanoidRootPart.Position.X,v.HumanoidRootPart.Position.Y, v.HumanoidRootPart.Position.Z) * CFrame.Angles(0.015594969503581524, 0.7671796679496765, -0.010825042612850666)
+    }
+}
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Phantom Reminder").RemoteFunction:InvokeServer(unpack(args))
+local args = {
+    [1] = "throwswordlong",
+    [2] = {
+        [1] = CFrame.new(v.HumanoidRootPart.Position.X,v.HumanoidRootPart.Position.Y, v.HumanoidRootPart.Position.Z) * CFrame.Angles(0.015594969503581524, 0.7671796679496765, -0.010825042612850666)
+    }
+}
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Phantom Reminder").RemoteFunction:InvokeServer(unpack(args))
+local args = {
+    [1] = "throwswordlong",
+    [2] = {
+        [1] = CFrame.new(v.HumanoidRootPart.Position.X,v.HumanoidRootPart.Position.Y, v.HumanoidRootPart.Position.Z) * CFrame.Angles(0.015594969503581524, 0.7671796679496765, -0.010825042612850666)
+    }
+}
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Phantom Reminder").RemoteFunction:InvokeServer(unpack(args))
+local args = {
+    [1] = "throwswordlong",
+    [2] = {
+        [1] = CFrame.new(v.HumanoidRootPart.Position.X,v.HumanoidRootPart.Position.Y, v.HumanoidRootPart.Position.Z) * CFrame.Angles(0.015594969503581524, 0.7671796679496765, -0.010825042612850666)
+    }
+}
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Phantom Reminder").RemoteFunction:InvokeServer(unpack(args))
+local args = {
+    [1] = "throwswordlong",
+    [2] = {
+        [1] = CFrame.new(v.HumanoidRootPart.Position.X,v.HumanoidRootPart.Position.Y, v.HumanoidRootPart.Position.Z) * CFrame.Angles(0.015594969503581524, 0.7671796679496765, -0.010825042612850666)
+    }
+}
+game:GetService("Players").LocalPlayer.Character:FindFirstChild("Phantom Reminder").RemoteFunction:InvokeServer(unpack(args))
+
+    end
+    end
+end
