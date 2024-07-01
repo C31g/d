@@ -1,11 +1,14 @@
+local badbiomes = {"FlameRazedSky","FrostSky","Radiation","YinYangSky"}
 local Webhook = "https://ptb.discord.com/api/webhooks/1257270617745391717/33VMcwduKq3oUSLwfwO-lflafOG7Ddohhn1fSV5F6b2F5X2fe9G3qeDz3FWxCVK5TdtI"
+local previousName = game.Lighting:FindFirstChildOfClass("Sky").Name
+
 local function SendInfo()
     local url = Webhook
     local data = {
         ["embeds"] = {
             {
                 ["title"] = "Stat Update",
-                ["description"] = "biome -".. game.Lighting:FindFirstChild().Name ..,
+                ["description"] = "biome - " .. game.Lighting:FindFirstChildOfClass("Sky").Name,
                 ["type"] = "rich",
                 ["color"] = tonumber(0x7269da),
             }
@@ -20,4 +23,13 @@ local function SendInfo()
     local request = http_request or request or HttpPost or syn.request
     local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
     request(abcdef)
+end
+
+while true do
+    local currentName = game.Lighting:FindFirstChildOfClass("Sky").Name
+    if currentName ~= previousName then
+        SendInfo()
+        previousName = currentName
+    end
+    wait(1) -- Add a delay to prevent the loop from running too fast
 end
