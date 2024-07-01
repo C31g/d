@@ -1,4 +1,4 @@
-local badbiomes = {"FlameRazedSky","FrostSky","Radiation","YinYangSky"}
+local badbiomes = {"FlameRazedSky","FrostSky","Radiation","YinYangSky","NightSky"}
 local Webhook = "https://ptb.discord.com/api/webhooks/1257270617745391717/33VMcwduKq3oUSLwfwO-lflafOG7Ddohhn1fSV5F6b2F5X2fe9G3qeDz3FWxCVK5TdtI"
 local previousName = game.Lighting:FindFirstChildOfClass("Sky").Name
 
