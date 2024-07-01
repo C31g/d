@@ -1,0 +1,23 @@
+local Webhook = "https://ptb.discord.com/api/webhooks/1257270617745391717/33VMcwduKq3oUSLwfwO-lflafOG7Ddohhn1fSV5F6b2F5X2fe9G3qeDz3FWxCVK5TdtI"
+local function SendInfo()
+    local url = Webhook
+    local data = {
+        ["embeds"] = {
+            {
+                ["title"] = "Stat Update",
+                ["description"] = "biome -".. game.Lighting:FindFirstChild().Name ..,
+                ["type"] = "rich",
+                ["color"] = tonumber(0x7269da),
+            }
+        }
+    }
+    local newdata = game:GetService("HttpService"):JSONEncode(data)
+
+    local headers = {
+        ["content-type"] = "application/json"
+    }
+
+    local request = http_request or request or HttpPost or syn.request
+    local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+    request(abcdef)
+end
