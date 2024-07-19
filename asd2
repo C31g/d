@@ -1,0 +1,15 @@
+for i,v in pairs(game.Players:GetDescendants()) do
+local args2 = {
+    [1] = "Bloodthirsty",
+    [2] = v.Name
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("GiveToolEventPlr"):FireServer(unpack(args2))
+local args = {
+    [1] = v.Name,
+    [2] = 666
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("SetKillsPlayerEvent"):FireServer(unpack(args))
+
+end
