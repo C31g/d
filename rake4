@@ -1,5 +1,6 @@
 while true do
 wait(0.01)
+game.Workspace:WaitForChild("NPCs"):WaitForChild("The_Rake")
 local args = {
     [1] = workspace:WaitForChild("NPCs"):WaitForChild("The_Rake"),
     [2] = workspace:WaitForChild("NPCs"):WaitForChild("The_Rake"):WaitForChild("Head"),
