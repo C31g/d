@@ -1,0 +1,259 @@
+while true do
+    wait(0.1)  -- Slightly increased wait time to reduce resource usage
+
+    local npcs = game.Workspace:FindFirstChild("NPCs")
+    if npcs then
+        local theRake = npcs:FindFirstChild("The_Rake")
+        if theRake then
+            local head = theRake:FindFirstChild("Head")
+            local rakeFolder = theRake:FindFirstChild("RakeFolder")
+            if head and rakeFolder then
+                local playerStuff = rakeFolder:FindFirstChild("PlayerStuff")
+                if playerStuff then
+                    local events = playerStuff:FindFirstChild("Events")
+                    if events then
+                        local mRmf = events:FindFirstChild("M_RMF")
+                        if mRmf then
+                            local success, err = pcall(function()
+                                local args = {
+                                    [1] = theRake,
+                                    [2] = head,
+                                    [3] = {
+                                        ["Customs"] = {},
+                                        ["RandomSwingSound"] = true,
+                                        ["Targets"] = {
+                                            [1] = "Humanoid",
+                                            [2] = "NPC"
+                                        },
+                                        ["RakeDamage"] = 90000,
+                                        ["ExecuteSettings"] = {
+                                            ["Enabled"] = false,
+                                            ["CanBreak"] = false,
+                                            ["StaminaUsage"] = 35
+                                        },
+                                        ["MultipleHitSounds"] = false,
+                                        ["BreakSettings"] = {
+                                            ["Enabled"] = true,
+                                            ["ExplodeHead"] = false,
+                                            ["BleedKill"] = false,
+                                            ["RArm"] = {
+                                                ["Dmg"] = 25,
+                                                ["BleedTime"] = 0,
+                                                ["BleedDmg"] = 0,
+                                                ["BleedStep"] = 0,
+                                                ["RakeDmg"] = 200
+                                            },
+                                            ["BreakType"] = "LimbDismember",
+                                            ["Head"] = {
+                                                ["Dmg"] = 50,
+                                                ["BleedTime"] = 0,
+                                                ["RakeDmg"] = 200,
+                                                ["BleedDmg"] = 0,
+                                                ["BleedStep"] = 0,
+                                                ["CantBreak"] = false
+                                            },
+                                            ["LLeg"] = {
+                                                ["Dmg"] = 50,
+                                                ["BleedTime"] = 0,
+                                                ["BleedDmg"] = 0,
+                                                ["BleedStep"] = 0,
+                                                ["RakeDmg"] = 200
+                                            },
+                                            ["CanDismember"] = true,
+                                            ["RLeg"] = {
+                                                ["Dmg"] = 50,
+                                                ["BleedTime"] = 0,
+                                                ["BleedDmg"] = 0,
+                                                ["BleedStep"] = 0,
+                                                ["RakeDmg"] = 200
+                                            },
+                                            ["LArm"] = {
+                                                ["Dmg"] = 50,
+                                                ["BleedTime"] = 0,
+                                                ["BleedDmg"] = 0,
+                                                ["BleedStep"] = 0,
+                                                ["RakeDmg"] = 200
+                                            },
+                                            ["CanBreak"] = false
+                                        },
+                                        ["AttackSlowDown"] = {
+                                            ["Enabled"] = true,
+                                            ["AntiSprint"] = false,
+                                            ["Amount"] = -5
+                                        },
+                                        ["EquipTime"] = 0.8,
+                                        ["RakeStuns"] = 2,
+                                        ["RotVel"] = 5,
+                                        ["BlockHitStrength"] = 6,
+                                        ["StaminaUsage"] = 12,
+                                        ["SlashStages"] = 2,
+                                        ["Fatal"] = false,
+                                        ["Handle"] = {
+                                            [1] = "Tool",
+                                            [2] = "Handle"
+                                        },
+                                        ["SlowDown"] = {
+                                            ["Enabled"] = false,
+                                            ["AntiSprint"] = false,
+                                            ["Amount"] = 0
+                                        },
+                                        ["KnockbackParent"] = "Root",
+                                        ["CanClash"] = true,
+                                        ["Damage"] = 38,
+                                        ["M3HitCombo"] = false,
+                                        ["KnockbackType"] = "BodyVelocity",
+                                        ["BlockSettings"] = {
+                                            ["MultipleBlocking"] = false,
+                                            ["SlowDown"] = 10,
+                                            ["Enabled"] = false,
+                                            ["HitFlinchTime"] = 0.6,
+                                            ["Strength"] = 6,
+                                            ["StaminaUsage"] = 0.175
+                                        },
+                                        ["EquipAnimSpeed"] = 1,
+                                        ["Combo"] = {
+                                            ["Enabled"] = false,
+                                            ["OnePerson"] = true,
+                                            ["ConcusseStrength"] = 1,
+                                            ["KnockTime"] = 0,
+                                            ["ForceMulti"] = 1,
+                                            ["Multi"] = 1,
+                                            ["ConcusseTime"] = 0,
+                                            ["CanConcusse"] = false
+                                        },
+                                        ["Sharp"] = true,
+                                        ["Blood"] = {
+                                            ["Enabled"] = true,
+                                            ["Enabled2"] = true,
+                                            ["A"] = {
+                                                ["RepeatCount"] = 1,
+                                                ["UpVector"] = Vector3.new(0, -5, 0),
+                                                ["MaxYAngle"] = 50,
+                                                ["RepeatTick"] = 0,
+                                                ["WidthScale"] = 3,
+                                                ["Amount"] = {
+                                                    [1] = 3,
+                                                    [2] = 6
+                                                },
+                                                ["Speed"] = 85,
+                                                ["Spread"] = {
+                                                    [1] = -25,
+                                                    [2] = 25
+                                                },
+                                                ["Size"] = 3
+                                            },
+                                            ["B"] = {
+                                                ["RepeatCount"] = 0,
+                                                ["UpVector"] = Vector3.new(0, 7.5, 0),
+                                                ["Speed"] = 5,
+                                                ["Amount"] = {
+                                                    [1] = 1,
+                                                    [2] = 1
+                                                },
+                                                ["RepeatTick"] = 0,
+                                                ["Spread"] = {
+                                                    [1] = -10,
+                                                    [2] = 10
+                                                },
+                                                ["WidthScale"] = 0.5,
+                                                ["Size"] = 1
+                                            }
+                                        },
+                                        ["AntiCrouch"] = false,
+                                        ["ForcePVP"] = false,
+                                        ["Range"] = 20,
+                                        ["Mains"] = {
+                                            ["S1"] = {
+                                                ["BleedTime"] = 10,
+                                                ["HitAttachmentEffect"] = true,
+                                                ["ComboEndTime"] = 1.5,
+                                                ["SoundPart"] = {
+                                                    [1] = "Tool",
+                                                    [2] = "Handle"
+                                                },
+                                                ["MissSlowDown"] = true,
+                                                ["FlinchTime"] = 0.5,
+                                                ["ForceMulti"] = 1,
+                                                ["BleedTick"] = 1,
+                                                ["DebounceTime"] = 0.5,
+                                                ["ConcusseTime"] = 1,
+                                                ["MaxHits"] = 2,
+                                                ["CanKnock"] = true,
+                                                ["KnockTime"] = 1,
+                                                ["SwingWait"] = 0.23,
+                                                ["ConcusseStrength"] = 1.25,
+                                                ["DmgMulti2"] = 1,
+                                                ["Force"] = 6.5,
+                                                ["AnimSpeed"] = 1,
+                                                ["Hitter"] = {
+                                                    [1] = "Tool",
+                                                    [2] = "Handle"
+                                                },
+                                                ["CanConcusse"] = true,
+                                                ["ForceUpVec"] = Vector3.new(0, 1.25, 0),
+                                                ["KnockMode"] = "Head",
+                                                ["BleedDmg"] = 5,
+                                                ["SwingTime"] = 0.2,
+                                                ["DmgMulti"] = 1
+                                            },
+                                            ["S2"] = {
+                                                ["BleedTime"] = 10,
+                                                ["HitAttachmentEffect"] = true,
+                                                ["ComboEndTime"] = 1.5,
+                                                ["SoundPart"] = {
+                                                    [1] = "Tool",
+                                                    [2] = "Handle"
+                                                },
+                                                ["MissSlowDown"] = true,
+                                                ["FlinchTime"] = 0.5,
+                                                ["ForceMulti"] = 1,
+                                                ["BleedTick"] = 1,
+                                                ["DebounceTime"] = 0.5,
+                                                ["ConcusseTime"] = 1,
+                                                ["MaxHits"] = 2,
+                                                ["CanKnock"] = true,
+                                                ["KnockTime"] = 1,
+                                                ["SwingWait"] = 0.2,
+                                                ["ConcusseStrength"] = 1.25,
+                                                ["DmgMulti2"] = 1,
+                                                ["Force"] = 6.5,
+                                                ["AnimSpeed"] = 1,
+                                                ["Hitter"] = {
+                                                    [1] = "Tool",
+                                                    [2] = "Handle"
+                                                },
+                                                ["CanConcusse"] = true,
+                                                ["ForceUpVec"] = Vector3.new(0, 1.25, 0),
+                                                ["KnockMode"] = "Head",
+                                                ["BleedDmg"] = 5,
+                                                ["SwingTime"] = 0.25,
+                                                ["DmgMulti"] = 1
+                                            }
+                                        },
+                                        ["AntiJump"] = false,
+                                        ["DCancelGuns"] = true,
+                                        ["RunIdle"] = true,
+                                        ["TrailEnabled"] = true
+                                    },
+                                    [4] = {} --[[DUPLICATE]],
+                                    [5] = 1,
+                                    [6] = false,
+                                    [7] = "\195\177\216\170\217\136\217\130\217\129 \216\185\217\134 \216\167\216\179\216\170\216\174\216\175\216" ..
+                                    "\167\217\133 \216\167\217\132\216\186\216\180",
+                                    [8] = "Slash"
+                                }
+
+                                args[4] = args[3].Mains.S1
+                                mRmf:FireServer(unpack(args))
+                            end)
+
+                            if not success then
+                                warn("Error encountered: " .. err)
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
