@@ -2,7 +2,7 @@ while true do
 wait(0.01)
 local args = {
     [1] = workspace:WaitForChild("NPCs"):WaitForChild("The_Rake"),
-    [2] = workspace:WaitForChild("NPCs"):WaitForChild("The_Rake"):WaitForChild("Left Arm"),
+    [2] = workspace:WaitForChild("NPCs"):WaitForChild("The_Rake"):WaitForChild("Head"),
     [3] = {
         ["Customs"] = {},
         ["RandomSwingSound"] = true,
