@@ -227,7 +227,8 @@ local args = {
         "\167\217\133 \216\167\217\132\216\186\216\180",
     [8] = "Slash"
 }
-end
+
 
 args[4] = args[3].Mains.S1
 workspace:WaitForChild("NPCs"):WaitForChild("The_Rake"):WaitForChild("RakeFolder"):WaitForChild("PlayerStuff"):WaitForChild("Events"):WaitForChild("M_RMF"):FireServer(unpack(args))
+end
