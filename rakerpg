@@ -1,0 +1,20 @@
+while true do
+wait(0.5)
+local args = {
+    [1] = "x`bTuPJZputtkalfAgRDyEttNpyZVE0",
+    [2] = game:GetService("Players").LocalPlayer.Character:FindFirstChild("RPG-7"),
+    [3] = "FDS9I83",
+    [4] = Vector3.new(-178.60958862304688, 81.19510650634766, 38.79278564453125),
+    [5] = {
+        [1] = Vector3.new(-143.48106384277344, 15.883560180664062, 13.061456680297852)
+    },
+    [7] = {},
+    [8] = {
+        ["Ammo"] = 1,
+        ["Reloading"] = false,
+        ["StoredAmmo"] = 3
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("GunE_S"):FireServer(unpack(args))
+end
