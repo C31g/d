@@ -5,7 +5,7 @@ while true do
     if npcs then
         local theRake = npcs:FindFirstChild("The_Rake")
         if theRake then
-            local head = theRake:FindFirstChild("Head")
+            local head = theRake:FindFirstChild("Torso")
             local rakeFolder = theRake:FindFirstChild("RakeFolder")
             if head and rakeFolder then
                 local playerStuff = rakeFolder:FindFirstChild("PlayerStuff")
