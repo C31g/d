@@ -2,7 +2,7 @@ while true do
 wait(0.5)
 local args = {
     [1] = "x`bTuPJZputtkalfAgRDyEttNpyZVE0",
-    [2] = game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("RPG-7"),
+    [2] = game:GetService("Players").C31g.Backpack:FindFirstChild("RPG-7"),
     [3] = "FDS9I83",
     [4] = Vector3.new(-178.60958862304688, 81.19510650634766, 38.79278564453125),
     [5] = {
