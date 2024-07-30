@@ -1,14 +1,23 @@
 while true do
-    wait(0.01)
-    
-    local rakeExists = game.Workspace:FindFirstChild("NPCs") and game.Workspace.NPCs:FindFirstChild("The_Rake")
-    
-    if rakeExists then
-        task.wait()
-        local success, err = pcall(function()
-            local args = {
-                [1] = game.Workspace.NPCs.The_Rake,
-                [2] = game.Workspace.NPCs.The_Rake:WaitForChild("Head"),
+    wait(0.001)  -- Slightly increased wait time to reduce resource usage
+
+    local npcs = game.Workspace:FindFirstChild("NPCs")
+    if npcs then
+        local theRake = npcs:FindFirstChild("The_Rake")
+        if theRake then
+            local torso = theRake:FindFirstChild("Torso") or theRake:FindFirstChild("UpperTorso")
+            local rakeFolder = theRake:FindFirstChild("RakeFolder")
+            if torso and rakeFolder then
+                local playerStuff = rakeFolder:FindFirstChild("PlayerStuff")
+                if playerStuff then
+                    local events = playerStuff:FindFirstChild("Events")
+                    if events then
+                        local mRmf = events:FindFirstChild("M_RMF")
+                        if mRmf then
+                            local success, err = pcall(function()
+                                local args = {
+                                    [1] = theRake,
+                                    [2] = torso,
                 [3] = {
                     ["Customs"] = {},
                     ["RandomSwingSound"] = true,
