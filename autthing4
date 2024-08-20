@@ -1,0 +1,83 @@
+getgenv().AutoFarmDioBoss = true
+
+local Centre = Vector3.new(19091,910,115)
+
+-- Remove unnecessary effects more smooth ig
+task.spawn(function()
+    while getgenv().AutoFarmDioBoss do
+        pcall(function()
+            local effects = workspace.Effects:GetChildren()
+            for i = #effects, 1, -1 do
+                local v = effects[i]
+                if v.Name == "Hold up, aint you Dio?" or v.Name == "FIRE" or v.Name == 'blood' then
+                    v:Destroy()
+                end
+            end
+        end)
+        task.wait(0.1) -- Slightly increased wait time for performance bullshit
+    end
+end)
+
+-- Find the Dio boss more efficiently
+task.spawn(function()
+    while getgenv().AutoFarmDioBoss do
+        pcall(function()
+            getgenv().Target = nil
+            for _, x in ipairs(workspace.Living:GetChildren()) do
+                if string.find(x.Name, "Dio") then
+                    getgenv().Target = x
+                    break -- Stop searching once the target is found
+                end
+            end
+        end)
+        task.wait(0.1) -- Slightly increased wait time for performance bullshit
+    end
+end)
+
+-- Move towards the target more efficiently
+task.spawn(function()
+    while getgenv().AutoFarmDioBoss do
+        pcall(function()
+            local target = getgenv().Target
+            if target and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character.Humanoid.Health > 0 then
+                local humanoidRootPart = game.Players.LocalPlayer.Character.HumanoidRootPart
+                local targetPosition = target.HumanoidRootPart.Position
+                humanoidRootPart.CFrame = CFrame.new(targetPosition - Vector3.new(0, 0, 5), targetPosition)
+            end
+        end)
+        task.wait(0.1) -- Slightly increased wait time for performance bullshit
+    end
+end)
+
+local DELAY_BEFORE_ATTACKING = 0.125 -- Reduced delay before attacking
+
+-- Attack and respawn
+task.spawn(function()
+    while getgenv().AutoFarmDioBoss do
+
+        if (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - Centre).Magnitude > 10 then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Centre)
+            task.wait(0.25)
+        end
+
+        local cooldown = game.Players.LocalPlayer.Cooldowns:FindFirstChild("Rush Attack")
+        if cooldown then
+            repeat
+                task.wait(0.01) -- Reduced wait time during cooldown
+            until not game.Players.LocalPlayer.Cooldowns:FindFirstChild("Rush Attack")
+        end
+
+        -- Attack
+        task.spawn(function()
+            task.wait(DELAY_BEFORE_ATTACKING)
+            local args = { [1] = "MouseButton1" }
+            game:GetService("ReplicatedStorage"):WaitForChild("ReplicatedModules"):WaitForChild("KnitPackage"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("MoveInputService"):WaitForChild("RF"):WaitForChild("FireInput"):InvokeServer(unpack(args))
+        end)
+
+        -- Respawn
+        local args = { [1] = "Spawn Boss Altar", [2] = "Dio", [3] = workspace:WaitForChild("NPCSpawns"):WaitForChild("Boss Altar"):WaitForChild("Spawn"):WaitForChild("Part") }
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("NpcFunc"):InvokeServer(unpack(args))
+
+        task.wait(1) -- Reduced wait time after respawn
+    end
+end)
