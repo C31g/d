@@ -1,0 +1,89 @@
+getgenv().AutoFarmDioBoss = true;
+
+task.spawn(function()
+    if getgenv().AutoFarmDioBoss == true then
+        pcall(function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2806.075927734375,1023.2745361328125,-744.5523681640625);
+        end)
+    end
+end)
+
+task.spawn(function()
+    if getgenv().AutoFarmDioBoss == false then
+        pcall(function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2806.075927734375,1023.2745361328125,-744.5523681640625);
+        end)
+    end
+end)
+
+task.spawn(function()
+    while getgenv().AutoFarmDioBoss == true do
+        pcall(function()
+            if not workspace.Living[game.Players.LocalPlayer.Name].StatesFolder.StandOn.Value == true then
+                local args = {[1] = "Q"};
+                game:GetService("ReplicatedStorage"):WaitForChild("ReplicatedModules"):WaitForChild("KnitPackage"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("MoveInputService"):WaitForChild("RF"):WaitForChild("FireInput"):InvokeServer(unpack(args)); 
+            end
+        end)
+        task.wait(0.45);
+    end
+end)
+
+task.spawn(function()
+    while getgenv().AutoFarmDioBoss == true do
+        pcall(function()
+            local args = {[1] = "Spawn Boss Altar",[2] = "Dio",[3] = workspace:WaitForChild("NPCSpawns"):WaitForChild("Boss Altar"):WaitForChild("Spawn"):WaitForChild("Part")};
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("NpcFunc"):InvokeServer(unpack(args));
+            local args = {[1] = "Spawn Boss Altar",[2] = "Dio",[3] = workspace:WaitForChild("NPCSpawns"):WaitForChild("Boss Altar"):WaitForChild("Spawn"):WaitForChild("Part")};
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("NpcFunc"):InvokeServer(unpack(args));
+        end)
+        task.wait(0.15);
+    end
+end)
+
+task.spawn(function()
+    while getgenv().AutoFarmDioBoss == true do
+        pcall(function()
+            for _,v in pairs(workspace.Effects:GetChildren()) do
+                if v.Name == "Hold up, aint you Dio?" then
+                    v:Destroy();
+                end
+            end
+        end)
+        task.wait(0.45);
+    end
+end)
+
+task.spawn(function()
+    while getgenv().AutoFarmDioBoss == true do
+        pcall(function()
+            getgenv().Target = nil;getgenv().FoundAnything = false;
+            for i,v in ipairs({"Dio"}) do
+                for _,x in ipairs(workspace.Living:GetChildren()) do
+                    if x:FindFirstChild("Head") and x.Name:lower():find(v:lower()) then
+                        if x:FindFirstChildOfClass("Humanoid").Health ~= 0 then
+                            getgenv().Target = x;getgenv().FoundAnything = true;
+                            break;
+                        end
+                    end
+                end
+            end
+        end)
+        task.wait(0.15);
+    end
+end)
+
+task.spawn(function()
+    while getgenv().AutoFarmDioBoss == true do
+        pcall(function()
+            if getgenv().Target and game.Players.LocalPlayer.Character.Humanoid.Health ~= 0 then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(getgenv().Target.HumanoidRootPart.Position - Vector3.new(0,0,-5),getgenv().Target.HumanoidRootPart.Position);
+                task.spawn(function()
+                    local args = {[1] = "MouseButton1"};
+                    game:GetService("ReplicatedStorage"):WaitForChild("ReplicatedModules"):WaitForChild("KnitPackage"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("MoveInputService"):WaitForChild("RF"):WaitForChild("FireInput"):InvokeServer(unpack(args));
+                    task.wait(0.25);
+                end)
+            end
+        end)
+        task.wait(0.0015);
+    end
+end)
