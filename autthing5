@@ -77,6 +77,6 @@ task.spawn(function()
         local args = { [1] = "Spawn Boss Altar", [2] = "Dio", [3] = workspace:WaitForChild("NPCSpawns"):WaitForChild("Boss Altar"):WaitForChild("Spawn"):WaitForChild("Part") }
         game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("NpcFunc"):InvokeServer(unpack(args))
 
-        task.wait(1.25) -- Reduced wait time after respawn
+        task.wait(1.5) -- Reduced wait time after respawn
     end
 end)
