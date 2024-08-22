@@ -1,0 +1,31 @@
+local knitPackage = game.ReplicatedStorage.ReplicatedModules.KnitPackage.Knit.Services
+local TraitService = knitPackage.TraitService
+
+
+
+if not _G.WantedTraits1 then
+    _G.WantedTraits1 = {
+       "Godly","Egotistic Godly"; -- delete the one you dont want
+    }
+end
+
+task.spawn(function()
+    local con1
+
+    con1 = TraitService.RE.TraitHand.OnClientEvent:Connect(function(arg1)
+        local found1 = false
+
+        for ID, Card in pairs(arg1) do
+            if table.find(_G.WantedTraits1, Card.Trait) then
+               TraitService.RF.PickTrait:InvokeServer(ID)
+                found1 = true
+                con1:Disconnect()
+                break
+            end
+        end
+
+        if not found then
+            TraitService.RF.DiscardTraits:InvokeServer()
+        end
+    end)
+end)
