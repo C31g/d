@@ -5,7 +5,7 @@ local TraitService = knitPackage.TraitService
 
 if not _G.WantedTraits1 then
     _G.WantedTraits1 = {
-       "Godly","Egotistic Godly"; -- delete the one you dont want
+       "Godly","Vampiric","Egotistic Godly"; -- delete the one you dont want
     }
 end
 
