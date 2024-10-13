@@ -1,0 +1,10 @@
+local CheckDialogue = game.ReplicatedStorage.ReplicatedModules.KnitPackage.Knit.Services.DialogueService.RF.CheckDialogue
+local Sword = game.ReplicatedStorage.ReplicatedModules.KnitPackage.Knit.Services.AdventureService.RF.PickedUpSword
+_G.ENABLED = true
+while _G.ENABLED do
+    task.spawn(function()
+            CheckDialogue:InvokeServer("Zoros_Swords_Adventure")
+Sword:InvokeServer()
+    end)
+    task.wait()
+end
